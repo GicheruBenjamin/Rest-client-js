@@ -6,7 +6,7 @@ export async function getUsers() {
         const response = await fetch(`${API_URL}/users`);
         const users = await response.json();
         console.log("\nUsers:");
-        users.slice(0, 5).forEach((user) => {
+        users.slice(0, 100).forEach((user) => {
             console.log(`- ${user.name} (${user.email})`);
         });
     } catch (error) {

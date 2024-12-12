@@ -6,7 +6,7 @@ export async function getComments() {
         const response = await fetch(`${API_URL}/comments`);
         const comments = await response.json();
         console.log("\nComments:");
-        comments.slice(0, 5).forEach((comment) => {
+        comments.slice(0, 20).forEach((comment) => {
             console.log(`- ${comment.name}`);
         });
     } catch (error) {

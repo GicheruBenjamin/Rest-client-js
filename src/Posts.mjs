@@ -6,7 +6,7 @@ export async function getPosts() {
         const response = await fetch(`${API_URL}/posts`);
         const posts = await response.json();
         console.log("\nPosts:");
-        posts.slice(0, 5).forEach((post) => {
+        posts.slice(0, 20).forEach((post) => {
             console.log(`- ${post.title}`);
         });
     } catch (error) {

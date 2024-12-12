@@ -6,7 +6,7 @@ export async function getTodos() {
         const response = await fetch(`${API_URL}/todos`);
         const todos = await response.json();
         console.log("\nTodos:");
-        todos.slice(0, 5).forEach((todo) => {
+        todos.slice(0, 10).forEach((todo) => {
             console.log(`- ${todo.title} [${todo.completed ? "Done" : "Pending"}]`);
         });
     } catch (error) {
